@@ -4,11 +4,13 @@ using System.Data;
 public class TestAtemptRepository
 {
     DatabaseManager databaseManager;
+    StudentRepository studentRepository;
     private static string ENTITY_NAME = "test_atempt";
 
-    public TestAtemptRepository(DatabaseManager databaseManager)
+    public TestAtemptRepository(DatabaseManager databaseManager, StudentRepository studentRepository)
     {
         this.databaseManager = databaseManager;
+        this.studentRepository = studentRepository;
     }
 
     public List<TestAtempt> getTestResult(int testId) {
@@ -68,7 +70,8 @@ public class TestAtemptRepository
         List<TestAtempt> atempts = new List<TestAtempt>();
         while (reader.Read())
         {
-            atempts.Add(new TestAtempt(reader.GetInt32(0), reader.GetString(1),reader.GetInt32(3), reader.GetInt32(4)));
+            Student student = studentRepository.findById(reader.GetInt32(5));
+            atempts.Add(new TestAtempt(reader.GetInt32(0), reader.GetString(1),reader.GetInt32(3), reader.GetInt32(4), student));
         }
         return atempts;
     }

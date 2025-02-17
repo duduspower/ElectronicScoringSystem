@@ -8,6 +8,7 @@ internal class TeacherUserInterface : AbstractUserInterface
     QuestionRepository questionRepository;
     AnswearRepository answerRepository;
     TestRepository testRepository;
+    TestAtemptRepository atemptRepository;
 
     private static List<string> operations = new List<string>() {
             "(0) Add class",
@@ -17,10 +18,11 @@ internal class TeacherUserInterface : AbstractUserInterface
             "(4) List all students",
             "(5) List all classes for teacher",
             "(6) Handle add student to class",
+            "(7) View test result for test",
             "(-1) Exit"
         };
 
-    public TeacherUserInterface(Teacher teacher, StudentRepository studentRepository, StudentsClassRepository studentsClassRepository, QuestionRepository questionRepository, AnswearRepository answerRepository, TestRepository testRepository)
+    public TeacherUserInterface(Teacher teacher, StudentRepository studentRepository, StudentsClassRepository studentsClassRepository, QuestionRepository questionRepository, AnswearRepository answerRepository, TestRepository testRepository, TestAtemptRepository atemptRepository)
     {
         this.teacher = teacher;
         this.studentRepository = studentRepository;
@@ -28,6 +30,7 @@ internal class TeacherUserInterface : AbstractUserInterface
         this.questionRepository = questionRepository;
         this.answerRepository = answerRepository;
         this.testRepository = testRepository;
+        this.atemptRepository = atemptRepository;
     }
 
     public override void handleChoosedOperation()
@@ -57,6 +60,9 @@ internal class TeacherUserInterface : AbstractUserInterface
             case 6:
                 handleAddStudentToClass();
                 break;
+            case 7:
+                handleViewTestResultByTestId();
+                break;
             case -1:
                 Console.WriteLine("Exiting with status code 0");
                 Environment.Exit(0);
@@ -72,7 +78,8 @@ internal class TeacherUserInterface : AbstractUserInterface
         studentsClass.students.ForEach(student => studentsClassRepository.addStudentToClass(studentClassEntity, student));
     }
 
-    private void handleAddStudentToClass() {
+    private void handleAddStudentToClass()
+    {
         Console.WriteLine("Give class id : ");
         Console.WriteLine("Printing students classes : ");
         List<StudentsClass> studentClasses = studentsClassRepository.findByTeacher(teacher.id);
@@ -83,6 +90,14 @@ internal class TeacherUserInterface : AbstractUserInterface
         int studentId = Convert.ToInt32(Console.ReadLine());
         Student student = studentRepository.findById(studentId);
         studentsClassRepository.addStudentToClass(sc, student);
+    }
+
+    private void handleViewTestResultByTestId()
+    {
+        Console.WriteLine("Give testId");
+        int testId = Convert.ToInt32(Console.ReadLine());
+        List<TestAtempt> atempts = atemptRepository.getTestResult(testId);
+        atempts.ForEach(ta => ta.printResultForStudent());
     }
 
     private void handleAddTest()//to do too complex logic for one method refactor in future

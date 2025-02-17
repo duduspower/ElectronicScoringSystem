@@ -64,7 +64,7 @@
             }
             else
             {
-                Console.WriteLine("Invalid password not matching pattern. Must have one letter Big and small case, number, special character and be at least 8 character long");
+                Console.WriteLine("Invalid email not matching pattern");
             }
         }
 
@@ -81,7 +81,7 @@
             }
             else
             {
-                Console.WriteLine("Invalid password not matching pattern. Must have one letter Big and small case, number, special character and be at least 8 character long");
+                Console.WriteLine("Invalid phone not matching pattern. Must have no blank characters starts with +(2countrynumber)+(9numbers)");
             }
         }
         okFlag = true;

@@ -18,3 +18,5 @@ CREATE TABLE students_class_to_students(
 
 select * from students_class_to_tests;
 delete from students_class_to_tests;
+
+delete from students_class where name = 'Wiedza ogólna';

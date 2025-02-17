@@ -7,7 +7,7 @@
     private static AdminInterface adminInterface = new AdminInterface(studentRepository, teacherRepository, authRepository);
     private static StudentsClassRepository studentsClassRepository = new StudentsClassRepository(databaseManager);
     private static QuestionRepository questionRepository = new QuestionRepository(databaseManager);
-    private static TestAtemptRepository testAtemptRepository = new TestAtemptRepository(databaseManager);
+    private static TestAtemptRepository testAtemptRepository = new TestAtemptRepository(databaseManager, studentRepository);
     private static AnswearRepository answearRepository = new AnswearRepository(databaseManager);
     private static TestRepository testRepository = new TestRepository(databaseManager, questionRepository, studentsClassRepository,testAtemptRepository, answearRepository);
 
@@ -27,19 +27,45 @@
     public static void switchToAdminPanel() {
         while (true)
         {
+            try
+            {
+                adminInterface.handleChoosedOperation();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
             adminInterface.handleChoosedOperation();
         }
     }
     public static void switchToStudentPanel(Student student) {
         StudentUserInterface studentUserInterface = new StudentUserInterface(testRepository, testAtemptRepository, answearRepository, student);
-        while (true) { 
+        while (true)
+        {
+
+            try
+            {
+                studentUserInterface.handleChoosedOperation();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
             studentUserInterface.handleChoosedOperation();
         }
     }
 
     public static void switchToTeacherPanel(Teacher teacher) {
-        TeacherUserInterface teacherUserInterface = new TeacherUserInterface(teacher, studentRepository, studentsClassRepository, questionRepository, answearRepository, testRepository);
+        TeacherUserInterface teacherUserInterface = new TeacherUserInterface(teacher, studentRepository, studentsClassRepository, questionRepository, answearRepository, testRepository, testAtemptRepository);
         while (true) { 
+            try
+            {
+                teacherUserInterface.handleChoosedOperation();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
             teacherUserInterface.handleChoosedOperation();
         }
     }

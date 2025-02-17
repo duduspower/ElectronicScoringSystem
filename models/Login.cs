@@ -30,8 +30,12 @@
             {
                 Console.WriteLine("Given login already exist. Try other one!");
             }
-            else if(LoginValidator.IsValidLogin(login)){ 
+            else if (LoginValidator.IsValidLogin(login))
+            {
                 okFlag = false;
+            }
+            else {
+                Console.WriteLine("Invalid login");
             }
         }
 

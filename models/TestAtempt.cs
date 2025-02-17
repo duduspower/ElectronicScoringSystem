@@ -16,6 +16,11 @@ public class TestAtempt
         this.incorrectAnswers = incorrectAnswers;
     }
 
+    public TestAtempt(int id, string name, int correctAnswears, int incorrectAnswers, Student student) : this(id, name, correctAnswears, incorrectAnswers)
+    {
+        this.student = student;
+    }
+
     public TestAtempt(string name, Test test, int correctAnswears, int incorrectAnswers, Student student)
     {
         this.name = name;
@@ -59,7 +64,7 @@ public class TestAtempt
 
     public void printResultForStudent() {
         int result = getResultForTest(correctAnswears, incorrectAnswers);
-        Console.WriteLine($"Result for test: [name : {this.name}, result : {result}]");
+        Console.WriteLine($"Result for test: [name : {this.name}, result : {result}, student : {student.name + " " + student.surname}]");
     }
 
     public int getResultForTest(int correctAnswers, int incorrectAnswers)

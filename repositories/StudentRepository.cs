@@ -36,7 +36,7 @@ public class StudentRepository
         SqlParameter[] parameters = {
             new SqlParameter("@name", SqlDbType.VarChar) { Value = student.name },
             new SqlParameter("@surname", SqlDbType.VarChar) { Value = student.surname },
-            new SqlParameter("@date_of_birth", SqlDbType.Date) { Value = student.dateOfBirth },
+            new SqlParameter("@date_of_birth", SqlDbType.Date) { Value = student.dateOfBirth.ToDateTime(new TimeOnly(0, 0)) },
             new SqlParameter("@email", SqlDbType.VarChar) { Value = student.email },
             new SqlParameter("@phone", SqlDbType.Char) { Value = student.phone },
             new SqlParameter("@student_index", SqlDbType.Char) { Value = student.index },
@@ -58,7 +58,7 @@ public class StudentRepository
             new SqlParameter("@id", SqlDbType.Int) { Value = id },
             new SqlParameter("@name", SqlDbType.VarChar) { Value = student.name },
             new SqlParameter("@surname", SqlDbType.VarChar) { Value = student.surname },
-            new SqlParameter("@date_of_birth", SqlDbType.Date) { Value = student.dateOfBirth },
+            new SqlParameter("@date_of_birth", SqlDbType.Date) { Value = student.dateOfBirth.ToDateTime(new TimeOnly(0, 0)) },
             new SqlParameter("@email", SqlDbType.VarChar) { Value = student.email },
             new SqlParameter("@phone", SqlDbType.Char) { Value = student.phone },
             new SqlParameter("@student_index", SqlDbType.Char) { Value = student.index }
@@ -133,7 +133,7 @@ public class StudentRepository
                 reader.GetInt32(0),
                 reader.GetString(1),
                 reader.GetString(2),
-                new DateOnly(),
+                DateOnly.FromDateTime(reader.GetDateTime(3)),
                reader.GetString(4),
                reader.GetString(5),
                reader.GetString(6),
