@@ -20,6 +20,18 @@ public class TestRepository
         this.answearRepository = answearRepository;
     }
 
+    public TestRepository(DatabaseManager databaseManager, QuestionRepository questionRepository, StudentsClassRepository studentsClassRepository, AnswearRepository answearRepository)
+    {
+        this.databaseManager = databaseManager;
+        this.questionRepository = questionRepository;
+        this.studentsClassRepository = studentsClassRepository;
+        this.answearRepository = answearRepository;
+    }
+
+
+
+
+
 
     //no update because it will be problematic in managment(updating every test atempt canceling every atempt that happend before change itd)
 

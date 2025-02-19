@@ -5,12 +5,14 @@ public class TestAtemptRepository
 {
     DatabaseManager databaseManager;
     StudentRepository studentRepository;
+    TestRepository testRepository;
     private static string ENTITY_NAME = "test_atempt";
 
-    public TestAtemptRepository(DatabaseManager databaseManager, StudentRepository studentRepository)
+    public TestAtemptRepository(DatabaseManager databaseManager, StudentRepository studentRepository, TestRepository testRepository)
     {
         this.databaseManager = databaseManager;
         this.studentRepository = studentRepository;
+        this.testRepository = testRepository;
     }
 
     public List<TestAtempt> getTestResult(int testId) {
@@ -71,7 +73,8 @@ public class TestAtemptRepository
         while (reader.Read())
         {
             Student student = studentRepository.findById(reader.GetInt32(5));
-            atempts.Add(new TestAtempt(reader.GetInt32(0), reader.GetString(1),reader.GetInt32(3), reader.GetInt32(4), student));
+            Test test = testRepository.findTestById(reader.GetInt32(2));
+            atempts.Add(new TestAtempt(reader.GetInt32(0), reader.GetString(1),test,reader.GetInt32(3), reader.GetInt32(4), student));
         }
         return atempts;
     }

@@ -16,8 +16,13 @@ public class TestAtempt
         this.incorrectAnswers = incorrectAnswers;
     }
 
-    public TestAtempt(int id, string name, int correctAnswears, int incorrectAnswers, Student student) : this(id, name, correctAnswears, incorrectAnswers)
+    public TestAtempt(int id, string name, Test test, int correctAnswears, int incorrectAnswers, Student student)
     {
+        this.id = id;
+        this.name = name;
+        this.test = test;
+        this.correctAnswears = correctAnswears;
+        this.incorrectAnswers = incorrectAnswers;
         this.student = student;
     }
 

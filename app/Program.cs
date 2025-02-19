@@ -7,8 +7,8 @@
     private static AdminInterface adminInterface = new AdminInterface(studentRepository, teacherRepository, authRepository);
     private static StudentsClassRepository studentsClassRepository = new StudentsClassRepository(databaseManager);
     private static QuestionRepository questionRepository = new QuestionRepository(databaseManager);
-    private static TestAtemptRepository testAtemptRepository = new TestAtemptRepository(databaseManager, studentRepository);
     private static AnswearRepository answearRepository = new AnswearRepository(databaseManager);
+    private static TestAtemptRepository testAtemptRepository = new TestAtemptRepository(databaseManager, studentRepository, new TestRepository(databaseManager, questionRepository, studentsClassRepository, answearRepository));
     private static TestRepository testRepository = new TestRepository(databaseManager, questionRepository, studentsClassRepository,testAtemptRepository, answearRepository);
 
 
