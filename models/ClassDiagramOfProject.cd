@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MainProgram" Collapsed="true">
+    <Position X="23.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAACAAAAAAAgBYAAAAAAEAACAAABABEsEAAA=</HashCode>
+      <FileName>app\Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DatabaseConfig" Collapsed="true">
+    <Position X="30.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAQAAABAAAAAAAAAAA=</HashCode>
+      <FileName>db\DatabaseConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DatabaseManager" Collapsed="true">
+    <Position X="23.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>db\DatabaseManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Login" Collapsed="true">
+    <Position X="28.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAgAAEgA=</HashCode>
+      <FileName>models\Login.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Answear" Collapsed="true">
+    <Position X="23.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAgA=</HashCode>
+      <FileName>models\Question.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Question" Collapsed="true">
+    <Position X="28.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAABAAAAACAAQAAAAAAAAAAACAAgAAABAAAAgA=</HashCode>
+      <FileName>models\Question.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Student" Collapsed="true">
+    <Position X="23.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAQCAAAAAAAAAgAAAEBAAAAAAEAAAgAAAAAAABEgA=</HashCode>
+      <FileName>models\Student.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StudentsClass" Collapsed="true">
+    <Position X="26.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAAAAABAACAEAAAAAAAAAAADAgA=</HashCode>
+      <FileName>models\StudentsClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Teacher" Collapsed="true">
+    <Position X="30.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAgAAAEBAADAAAEAAAgAAAAAgAAEgA=</HashCode>
+      <FileName>models\Teacher.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Test" Collapsed="true">
+    <Position X="25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAACAAAAAAAEAAAAAAQQAAQEQAAAAAAAAAAAAgA=</HashCode>
+      <FileName>models\Test.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TestAtempt" Collapsed="true">
+    <Position X="26.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAQAABEAAAAAAAAAADAAEAAAIACEAAAAAAgA=</HashCode>
+      <FileName>models\TestAtempt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AnswearRepository" Collapsed="true">
+    <Position X="25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAMgAAAAAAiAAAAAACAAACA=</HashCode>
+      <FileName>repositories\AnswearRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AuthRepository" Collapsed="true">
+    <Position X="26.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAEAAAAAgAAAAAIAIAAABAAAAAAABAAAAAAAg=</HashCode>
+      <FileName>repositories\AuthRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuestionRepository" Collapsed="true">
+    <Position X="30.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAJAMgAgAAAAIAAAAAACAAAAA=</HashCode>
+      <FileName>repositories\QuestionRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StudentRepository" Collapsed="true">
+    <Position X="25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAggAAAACAAEAAAYAAIAMAAAAAAAAAAAAAACQCAAA=</HashCode>
+      <FileName>repositories\StudentRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StudentsClassRepository" Collapsed="true">
+    <Position X="28.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAIAAACAACAAAAAAAAAAIAMAAIAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>repositories\StudentsClassRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeacherRepository" Collapsed="true">
+    <Position X="23.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAggAAACCEAIAAAIAAIAMAAAAAAAEBAAAAACAAAAA=</HashCode>
+      <FileName>repositories\TeacherRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TestAtemptRepository" Collapsed="true">
+    <Position X="28.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAIAAIAIAAAAAABCAAIAAAAgAAAg=</HashCode>
+      <FileName>repositories\TestAtemptRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TestRepository" Collapsed="true">
+    <Position X="30.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAgABBBAIAAAAAAgAIwIAAAAAAAUAQAAAAAEEAAA=</HashCode>
+      <FileName>repositories\TestRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AbstractUserInterface" Collapsed="true">
+    <Position X="17.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAgAAAAgA=</HashCode>
+      <FileName>userInterfaces\AbstractUserInterface.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AdminInterface" Collapsed="true">
+    <Position X="16.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAhAgAACAAgIAAAACAAAAAAAAQASACAAAgAgAAAA=</HashCode>
+      <FileName>userInterfaces\AdminInterface.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Credidential" Collapsed="true">
+    <Position X="28.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAEAA=</HashCode>
+      <FileName>userInterfaces\LoginInterface.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LoginInterface" Collapsed="true">
+    <Position X="18.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAACAAgAAAAAAAAACAAACAICAACYAgAgIAAA=</HashCode>
+      <FileName>userInterfaces\LoginInterface.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StudentUserInterface" Collapsed="true">
+    <Position X="20.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAkAAAAgAAAAAAAAEAAAAAAAAgAAAAQA=</HashCode>
+      <FileName>userInterfaces\StudentUserInterface.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeacherUserInterface" Collapsed="true">
+    <Position X="14" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIIAAAAEgABAAgAAAAQAAAEIAAAEAASAAAAAgAEFAAA=</HashCode>
+      <FileName>userInterfaces\TeacherUserInterface.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EmailValidator" Collapsed="true">
+    <Position X="25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>validatiors\EmailValidator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IndexValidator" Collapsed="true">
+    <Position X="26.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>validatiors\IndexValidator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LoginValidator" Collapsed="true">
+    <Position X="30.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>validatiors\LoginValidator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PasswordValidator" Collapsed="true">
+    <Position X="25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>validatiors\PasswordValidator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PhoneValidator" Collapsed="true">
+    <Position X="26.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>validatiors\PhoneValidator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -99,9 +99,10 @@ public class Question
         Console.WriteLine($"Question : [ Id : {this.id}, Name : {this.value}]");
     }
 
-    public void printQuestionsWithAnswers()
+    public void printQuestionWithAnswers()
     {
         Console.WriteLine("");
+        Console.WriteLine(value);
         Console.WriteLine("Answears : {");
         for (int i = 0; i < this.answears.Count; i++) {
             Console.WriteLine($"({i}) : {answears[i].value}");

@@ -108,21 +108,21 @@ internal class TeacherUserInterface : AbstractUserInterface
         List<int> questionIds = new List<int>();
         test.questions.ForEach(q => questionIds.Add(questionRepository.addQuestion(q)));
         questionIds.ForEach(qId => questionRepository.addQuestionTestRelation(qId, testId));
-        List<List<int>> answearIds = new List<List<int>>();
+        int[][] answearIds = new int[questionIds.Count][];
 
         for (int i = 0; i < test.questions.Count; i++)
         {
-            answearIds.Add(new List<int>());
-            List<int> answears = answearIds[0];
+            answearIds[i] = new int[test.questions[i].answears.Count];
+
             for (int j = 0; j < test.questions[i].answears.Count; j++)
             {
-                answears.Add(answerRepository.addAnsware(test.questions[i].answears[j]));
+                answearIds[i][j] = answerRepository.addAnsware(test.questions[i].answears[j]);
             }
         }
 
-        for (int i = 0; i < answearIds.Count; i++)
+        for (int i = 0; i < questionIds.Count; i++)
         {
-            for (int j = 0; j < answearIds[i].Count; j++)
+            for (int j = 0; j < answearIds[i].Length; j++)
             {
                 answerRepository.addQuestionAnswearRelation(questionIds[i], answearIds[i][j]);
             }

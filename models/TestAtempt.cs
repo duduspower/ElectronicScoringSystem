@@ -48,18 +48,22 @@ public class TestAtempt
     }
 
     private static Answear getAnswearFromUser(Question question) {
-        question.printQuestionsWithAnswers();
+        question.printQuestionWithAnswers();
         Console.WriteLine("Give answear(numberOfAnswear) : ");
         int answear = Convert.ToInt32(Console.ReadLine());
         return question.answears[answear];
     }
 
-    private bool verifyAnswer(string answear, string correctAnswear) { 
-        return answear.Equals(correctAnswear);
-    }
-
-    public static List<Question> randomiseQuestion(List<Question> questions) {
-        return questions; //todo randomise
+    public static List<Question> randomiseQuestion(List<Question> questions)
+    {
+        Random random = new Random();
+        int n = questions.Count;
+        for (int i = n - 1; i > 0; i--)
+        {
+            int j = random.Next(0, i + 1);
+            (questions[i], questions[j]) = (questions[j], questions[i]);
+        }
+        return questions;
     }
 
     public void printResultForStudent() {
